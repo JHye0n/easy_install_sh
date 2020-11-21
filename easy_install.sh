@@ -6,7 +6,7 @@ sudo apt install gcc-multilib
 
 sudo apt install build-essential
 
-sudo apt install git curl wget
+sudo apt install git curl wget vim
 
 sudo sh -c 'curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /etc/apt/trusted.gpg.d/microsoft.gpg'
 
