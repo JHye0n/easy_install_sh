@@ -2,13 +2,9 @@
 
 sudo apt update
 
-sudo apt install gcc-multilib
+sudo apt install vim git curl wget gcc-multilib, build-essential python3 python3-dev python3-pip python3-venv
 
-sudo apt install build-essential
-
-sudo apt install git curl wget vim
-
-sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+sudo apt-get install apt-transport-https ca-certificates gnupg-agent software-properties-common
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
@@ -17,9 +13,9 @@ sudo add-apt-repository \
 $(lsb_release -cs) \
 stable"
 
-sudo sh -c 'curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /etc/apt/trusted.gpg.d/microsoft.gpg'
+curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 
-sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+sudo apt-add-repository https://packages.microsoft.com/ubuntu/20.04/prod
 
 sudo apt update
 
